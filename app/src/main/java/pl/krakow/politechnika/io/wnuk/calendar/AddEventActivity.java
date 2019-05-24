@@ -42,9 +42,6 @@ import pl.krakow.politechnika.io.wnuk.calendar.color.ColorItem;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_event);
 
-        /**
-         * Toolbar added
-         */
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -60,9 +57,6 @@ import pl.krakow.politechnika.io.wnuk.calendar.color.ColorItem;
         colorAdapter = new ColorAdapter(this, colorList);
         colorSpinner.setAdapter(colorAdapter);
 
-        /**
-         * Color picker setup
-         */
         colorSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
@@ -75,9 +69,6 @@ import pl.krakow.politechnika.io.wnuk.calendar.color.ColorItem;
             }
         });
 
-        /**
-         * Return data from activity
-         */
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -103,9 +94,6 @@ import pl.krakow.politechnika.io.wnuk.calendar.color.ColorItem;
             }
         });
 
-        /**
-         * Date picker setup
-         */
         mDisplayDate = (TextView) findViewById(R.id.tvDatePicker);
 
         mDisplayDate.setOnClickListener(new View.OnClickListener() {
@@ -135,10 +123,6 @@ import pl.krakow.politechnika.io.wnuk.calendar.color.ColorItem;
         };
     }
 
-    /**
-     * String to Color in Integeer
-     * initialization list of colors
-     */
     private void initList(){
         colorList = new ArrayList<>();
         colorList.add(new ColorItem("WHITE", R.drawable.white));
@@ -147,5 +131,6 @@ import pl.krakow.politechnika.io.wnuk.calendar.color.ColorItem;
         colorList.add(new ColorItem("BLUE", R.drawable.blue));
         colorList.add(new ColorItem("YELLOW", R.drawable.yellow));
         colorList.add(new ColorItem("GRAY", R.drawable.gray));
+        colorList.add(new ColorItem("DKGRAY", R.drawable.dark_gray_circle_md));
     }
 }

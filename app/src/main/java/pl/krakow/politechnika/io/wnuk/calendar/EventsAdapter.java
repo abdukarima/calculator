@@ -26,13 +26,6 @@ public class EventsAdapter extends ArrayAdapter<Event> {
         this.compactCalendarView = compactCalendarView;
     }
 
-    /**
-     * List of events adapter
-     * @param position
-     * @param convertView
-     * @param parent
-     * @return
-     */
     @NonNull
     @Override
     public View getView(final int position, @Nullable View convertView, @NonNull ViewGroup parent) {
@@ -50,11 +43,6 @@ public class EventsAdapter extends ArrayAdapter<Event> {
         }
         eventTextView.setText(eventString);
         eventImageButton.setImageResource(R.drawable.delete);
-
-        //TODO zrobić odswiezanie widoku
-        /**
-         * Remove event
-         */
         eventImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

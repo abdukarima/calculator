@@ -7,16 +7,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class StartActivity extends AppCompatActivity {
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
-
-        /**
-         * Start activity opening and timing
-         */
         final Intent intent = new Intent(this, MainActivity.class);
 
         Thread timer = new Thread(){
